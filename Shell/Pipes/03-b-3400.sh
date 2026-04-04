@@ -1,1 +1,4 @@
 # Колко коментара има във файла /etc/services ? Коментарите се маркират със символа #, след който всеки символ на реда се счита за коментар.
+
+grep '^#' /etc/services | wc -l
+awk '/^#/ { comments++ } END { print comments }' /etc/services
