@@ -1,0 +1,7 @@
+# Вземете факултетните номера на студентите (описани във файла
+# <РЕПО>/exercises/data/mypasswd.txt) от СИ и ги запишете във файл si.txt сортирани.
+
+# Студент е част от СИ, ако home директорията на този потребител (според
+# <РЕПО>/exercises/data/mypasswd.txt) се намира в /home/SI директорията.
+
+grep '/home/SI' /srv/fmi-os/exercises/data/mypasswd.txt | cut -d ':' -f 1 | cut -c 2- | grep -E '[0-9]+' | sort -n > ~/si.txt
