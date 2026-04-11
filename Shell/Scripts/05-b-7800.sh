@@ -9,6 +9,6 @@ count=0
 while read -r -d ':' dir; do
     executable_count=$(find "${dir}" -maxdepth 1 -type f -executable 2>/dev/null | wc -l)
     count=$((count + executable_count))
-done<<<"${PATH}"
+done <<<"${PATH}"
 
 echo "Executable files: ${count}"

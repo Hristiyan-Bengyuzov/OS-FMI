@@ -23,4 +23,4 @@ size=$2
 
 while read file; do
     echo "${file}"
-done< <(find "${dir}" -type f -size +"${size}"c 2>/dev/null)
+done < <(find "${dir}" -type f -size +"${size}"c 2>/dev/null)
