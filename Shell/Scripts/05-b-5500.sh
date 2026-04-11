@@ -22,6 +22,6 @@ while IFS=: read -r username pass uid gid gecos home_dir login_shell; do
     echo "    <td>${login_shell}</td>"
     echo "    <td>${gecos}</td>"
     echo '  </tr>'
-done< /etc/passwd
+done < /etc/passwd
 
 echo '</table>'

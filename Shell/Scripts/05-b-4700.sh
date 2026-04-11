@@ -37,7 +37,7 @@ while read -n 1 ch; do
     if [[ $((count % 3)) -eq 0 ]]; then
         res+="${sep}"
     fi
-done< <(echo -n "${num}" | rev)
+done < <(echo -n "${num}" | rev)
 
 res=$(echo -n "${res}" | rev)
 

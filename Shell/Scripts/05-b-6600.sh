@@ -35,5 +35,5 @@ while read f1; do
                 break
             fi
         fi
-    done< <(find "${dir}" -type f 2>/dev/null)
-done< <(find "${dir}" -type f 2>/dev/null)
+    done < <(find "${dir}" -type f 2>/dev/null)
+done < <(find "${dir}" -type f 2>/dev/null)

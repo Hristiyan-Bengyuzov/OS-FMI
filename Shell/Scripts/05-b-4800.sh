@@ -27,7 +27,7 @@ while read file; do
         echo "${file}"
         found="true"
     fi
-done< <(find "${dir}" -type f 2>/dev/null)
+done < <(find "${dir}" -type f 2>/dev/null)
 
 if [[ "${found}" == "false" ]]; then
     echo 'No copies found' >&2

@@ -24,4 +24,4 @@ while read file; do
         entries=$(find "${file}" -mindepth 1 -maxdepth 1 2>/dev/null | wc -l)
         echo "${file} (${entries} entries)"
     fi
-done< <(find "${dir}" -mindepth 1 2>/dev/null)
+done < <(find "${dir}" -mindepth 1 2>/dev/null)
