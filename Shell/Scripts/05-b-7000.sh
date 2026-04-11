@@ -14,6 +14,6 @@ done
 read -p 'Enter a string to search for: ' search
 
 for file in "${@}"; do
-    rows=$(grep "${search}" "${file}" | wc -l)
+    rows=$(grep -F "${search}" "${file}" | wc -l)
     echo "${file} has ${rows} rows that contain the string"
 done
